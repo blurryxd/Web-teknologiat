@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" name="height" placeholder="Height in cm" id="cm">
+<br>
+<input type="number" name="weight" placeholder="Weight in kg" id="kg">
+<br>
+<button id="compute">Calculate BMI</button>
+<p id="response"></p>
+
+<script>
+  'use strict';
+
+  document.getElementById('compute').addEventListener('click', () => {
+    let height = Number(getHeight());
+    function getHeight() {
+      return document.getElementById('cm').value;
+    }
+
+    let weight = Number(getWeight());
+    function getWeight() {
+      return document.getElementById('kg').value;
+    }
+
+    console.log(height);
+    console.log(weight);
+    height = height / 100;
+    height = height * 2;
+    let response = weight / height;
+
+    if (isNaN(response) === false) {
+      console.log('läpi');
+      document.getElementById('response').innerHTML = 'Your BMI is: ' + Math.round(response * 100) / 100;
+    } else {
+      console.log('ei läpi');
+      document.getElementById('response').innerHTML = 'undefined';
+    }
+
+  });
+
+
+</script>
+
+</body>
+</html>

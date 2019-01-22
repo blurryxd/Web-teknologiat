@@ -1,0 +1,164 @@
+html{
+    background: -webkit-linear-gradient(-180deg, rgb(22, 98, 237), rgb(20, 69, 90));
+    background: linear-gradient(-180deg, rgb(22, 98, 237), rgb(20, 69, 90));
+    width:100%;
+    height:100%;
+}
+
+body{
+    position:relative;
+}
+
+#koppa{
+    border-color:darkgrey;
+    border-style: solid;
+    width: 80px;
+    height: 180px;
+    border-width: 4px;
+    background-color:black;
+    border-radius: 20px;
+}
+#tolppa{
+    background-color:lightgrey;
+    width:15px;
+    height:280px;
+    float:left;
+    margin-left:46%;
+
+}
+
+#frame{
+    width: 80px;
+    position: fixed;
+    top: 45%;
+    left: 65%;
+}
+
+#puna{
+    background-color:red;
+}
+
+#kelta{
+    background-color:yellow;
+}
+
+#viher{
+    background-color:green;
+}
+
+#puna:hover{
+    -webkit-box-shadow: 0px 0px 30px 5px rgba(255,0,0,1);
+    -moz-box-shadow: 0px 0px 30px 5px rgba(255,0,0,1);
+    box-shadow: 0px 0px 30px 5px rgba(255,0,0,1);
+}
+
+#kelta:hover{
+    -webkit-box-shadow: 0px 0px 30px 5px rgba(255,217,0,1);
+    -moz-box-shadow: 0px 0px 30px 5px rgba(255,217,0,1);
+    box-shadow: 0px 0px 30px 5px rgba(255,217,0,1);
+}
+
+#viher:hover{
+    -webkit-box-shadow: 0px 0px 30px 5px rgba(0,255,26,1);
+    -moz-box-shadow: 0px 0px 30px 5px rgba(0,255,26,1);
+    box-shadow: 0px 0px 30px 5px rgba(0,255,26,1);
+    Copy Text
+}
+
+
+.valot{
+    width:45px;
+    height: 45px;
+    border-radius:45px;
+    margin: auto;
+    margin-top: 8px;
+    box-shadow: 3px 3px 3px 3px  rgb(80, 80, 80) inset;
+}
+
+#aurinko{
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fefcea+49,f1da36+98 */
+    background: #fefcea; /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover, #fefcea 49%, #f1da36 98%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover, #fefcea 49%,#f1da36 98%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center, #fefcea 49%,#f1da36 98%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefcea', endColorstr='#f1da36',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    width:145px;
+    height: 145px;
+    border-radius:145px;
+    position: fixed;
+    top: 45%;
+    left: 45%;
+    -webkit-box-shadow: 10px 10px 79px 168px rgba(255,249,214,0.5);
+    -moz-box-shadow: 10px 10px 79px 168px rgba(255,249,214,0.5);
+    box-shadow: 10px 10px 79px 168px rgba(255,249,214,0.5);
+
+}
+
+#info{
+    position:fixed;
+    border-style:solid;
+    border-color:black;
+    border-width:3px;
+    background-color: rgba(60, 60, 60, 0.2);
+    height: auto;
+    width: 250px;
+    top: 66%;
+    color:white;
+    font-size: 1.2em;
+    padding: 6px;
+    font-family: 'Sarabun', sans-serif;
+}
+
+#asfaltti{
+    background-color: grey;
+    width:100.3%;
+    height:400px;
+    position:fixed;
+    top:70%;
+    border-top-left-radius: 1670px 170px;
+}
+
+#viiva1 {
+    background-color:antiquewhite;
+    width:20px;
+    height: 66px;
+    left: 50%;
+    position:fixed;
+    top:73%;
+}
+
+#viiva2 {
+    background-color:antiquewhite;
+    width:20px;
+    height: 60px;
+    left: 50%;
+    position:fixed;
+    top:83%;
+}
+
+#viiva3 {
+    background-color:antiquewhite;
+    width:20px;
+    height: 58px;
+    left: 50%;
+    position:fixed;
+    top:93%;
+}
+
+#viiva4 {
+    background-color:antiquewhite;
+    width:20px;
+    height: 380px;
+    left: 40%;
+    position:fixed;
+    top:71%;
+}
+
+#viiva5 {
+    background-color:antiquewhite;
+    width:20px;
+    height: 380px;
+    left: 60%;
+    position:fixed;
+    top:70%;
+}
