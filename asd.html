@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+  let waitsecs1 = (secs) => new Promise((resolve, reject) => {
+    if (secs < 10) {
+      setTimeout(() => resolve(`Success with ${secs} secs delay`), secs * 1000);
+    } else {
+      reject(`Failure with ${secs} secs delay`);
+    }
+  });
+
+  waitsecs1(2)
+  .then((msg) => console.log(`.then(): ${msg}`))
+  .catch((msg) => console.log(`.catch(): ${msg}`));
+  waitsecs1(12)
+  .then((msg) => console.log(`.then(): ${msg}`))
+  .catch((msg) => console.log(`.catch(): ${msg}`));
+  // .catch(): Failure with 12 secs delay
+  // .then(): Success with 2 secs delay
+
+
+</script>
+</body>
+</html>
