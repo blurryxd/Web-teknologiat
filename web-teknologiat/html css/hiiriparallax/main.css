@@ -1,0 +1,104 @@
+body {
+    background: url(tausta.png) no-repeat center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow:hidden;
+    background-color: black;
+}
+
+.kala {
+    background-image: url(kala.png);
+    background-position:center;
+    background-size:80%;
+    background-repeat: no-repeat;
+    height:300px;
+    width:30%;
+    position: absolute;
+    z-index: 3;
+    left: 30%;
+    top: 35%;
+}
+
+.text {
+    z-index: 2;
+    left: 40%;
+    top: 24%;
+    position:absolute;
+    font-size: 32px;
+    color:white;
+    filter: drop-shadow(30px 10px 4px black);
+    font-family: 'Shadows Into Light', cursive;
+
+}
+
+
+p {
+    color:white;
+
+    font-family: 'Archivo Narrow', sans-serif;
+
+}
+
+.fishes {
+    font-size: 76px;
+    position:absolute;
+    filter: drop-shadow(30px 10px 4px black);
+}
+
+#fish1 {
+    font-size: 160px;
+    top: 78%;
+    left: 50%;
+    z-index: 5;
+}
+
+#fish2 {
+    font-size: 150px;
+    top: 26%;
+    left: 57%;
+    z-index: 5;
+}
+
+#fish3 {
+    font-size: 130px;
+    top: 46%;
+    left: 27%;
+    z-index: 5;
+}
+
+#fish4 {
+    font-size: 78px;
+    top: 36%;
+    left: 37%;
+    z-index: 2;
+}
+
+#fish5 {
+    font-size: 78px;
+    top: 26%;
+    left: 67%;
+    z-index: 2;
+}
+
+#fish6 {
+    font-size: 78px;
+    top: 12%;
+    left: 12%;
+    z-index: 2;
+}
+
+#fish7 {
+    font-size: 60px;
+    top: 76%;
+    left: 67%;
+    z-index: 2;
+}
+
+#fish8 {
+    font-size: 50px;
+    top: 76%;
+    left: 17%;
+    z-index: 2;
+}

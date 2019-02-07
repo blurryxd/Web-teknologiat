@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="main.css">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Narrow|Shadows+Into+Light" rel="stylesheet">
+
+</head>
+<body>
+<p id="mousepos"></p>
+<div class="wrapper">
+    <div class="text" style="transform: translateX(0%) translateY(0%);"><h1>&#128031 Fishtank &#128031</h1></div>
+    <div class="kala" style="transform: translateX(0%) translateY(0%);"></div>
+    <div class="fishes" id="fish1" style="transform: translateX(0%) translateY(0%);">&#128031</div>
+    <div class="fishes" id="fish2" style="transform: translateX(0%) translateY(0%);">&#128031</div>
+    <div class="fishes" id="fish3" style="transform: translateX(0%) translateY(0%);">&#128031</div>
+    <div class="fishes" id="fish4" style="transform: translateX(0%) translateY(0%);">&#128031</div>
+    <div class="fishes" id="fish5" style="transform: translateX(0%) translateY(0%);">&#128031</div>
+    <div class="fishes" id="fish6" style="transform: translateX(0%) translateY(0%);">&#128031</div>
+    <div class="fishes" id="fish7" style="transform: translateX(0%) translateY(0%);">&#128031</div>
+    <div class="fishes" id="fish8" style="transform: translateX(0%) translateY(0%);">&#128031</div>
+
+</div>
+<script>
+
+    document.onmousemove = (event) => {
+      let x = event.clientX - 1200;
+      let y = event.clientY - 620;
+      document.getElementById("mousepos").innerHTML = "X coords: " + x + ". Y coords: " + y;
+      document.querySelector('.kala').style.transform = 'translateX(' + x/100 + '%) translateY(' + y/100 + '%)';
+      document.querySelector('.text').style.transform = 'translateX(' + x/100 + '%) translateY(' + y/100 + '%)';
+      document.querySelector('#fish1').style.transform = 'translateX(' + x/5 + '%) translateY(' + y/5 + '%)';
+      document.querySelector('#fish2').style.transform = 'translateX(' + x/10 + '%) translateY(' + y/10 + '%)';
+      document.querySelector('#fish3').style.transform = 'translateX(' + x/20 + '%) translateY(' + y/20 + '%)';
+      document.querySelector('#fish4').style.transform = 'translateX(' + x/67 + '%) translateY(' + y/67 + '%)';
+      document.querySelector('#fish5').style.transform = 'translateX(' + x/60 + '%) translateY(' + y/60 + '%)';
+      document.querySelector('#fish6').style.transform = 'translateX(' + x/60 + '%) translateY(' + y/60 + '%)';
+      document.querySelector('#fish7').style.transform = 'translateX(' + x/60 + '%) translateY(' + y/60 + '%)';
+      document.querySelector('#fish8').style.transform = 'translateX(' + x/60 + '%) translateY(' + y/60 + '%)';
+      document.querySelector('body').style.backgroundPosition = x/200 + "px " + y/200 + "px";
+
+    }
+
+</script>
+
+</body>
+</html>

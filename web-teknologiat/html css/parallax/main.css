@@ -1,0 +1,26 @@
+html {
+    background: url(tausta.png) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.wrapper{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+}
+
+.layer-1 {
+    background-image: url("maa.png");
+    background-color: #cccccc;
+    position: absolute;
+}
+
+.layer-2 {
+    background-image: url("portti_ihminen.png");
+    background-color: #cccccc;
+    position: absolute;
+}

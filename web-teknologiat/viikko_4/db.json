@@ -1,0 +1,7 @@
+{
+  "objects": [
+    { "description": "Videoiden katselu sivusto youtube.", "link": "https://www.youtube.com/?gl=FI&hl=fi" },
+    { "description": "Hakukone", "link": "https://www.google.com/" },
+    { "description": "Livestream sivusto", "link": "https://www.twitch.tv/"}
+  ]
+}

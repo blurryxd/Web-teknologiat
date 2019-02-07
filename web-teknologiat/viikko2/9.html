@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+  'use strict';
+  const numbers = [];
+  for (let i = 1; i <= 40; i++) {
+    numbers.push(Math.floor(Math.random() * 40) + 1);
+  }
+
+  //lähdettä algoritmin rakentamiseen: https://jonlabelle.com/snippets/view/javascript/calculate-mean-median-mode-and-range-in-javascript
+
+  const findMode = () => {
+    let count = [];
+    let maxIndex = 0;
+    let mode = [];
+    for (let i = 0; i < numbers.length; i += 1) {
+      let number = numbers[i];
+      count[number] = (count[number] || 0) + 1;
+      if (count[number] > maxIndex) {
+        maxIndex = count[number];
+      }
+    }
+
+    for (let i in count)
+      if (count.hasOwnProperty(i)) {
+        if (count[i] === maxIndex) {
+          mode.push(Number(i));
+        }
+      }
+
+    return mode;
+  };
+
+  console.log(numbers);
+  console.log(findMode());
+
+  //sorttaksen avulla, rullataan listan läpi ja kurkataan mitä lukua esiintyy eniten
+
+  numbers.sort((a, b) => {return a - b});
+  console.log(numbers);
+
+
+</script>
+</body>
+</html>

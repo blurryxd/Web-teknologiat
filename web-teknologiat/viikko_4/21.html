@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+  let promise1 = fetch('db.json').then(res => res.json());
+  let promise2 = [34, 64, 23];
+
+  Promise.all([promise1, promise2]).then(values => {
+    console.log(values)
+  });
+
+</script>
+</body>
+</html>

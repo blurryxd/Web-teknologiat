@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input type="number" name="number1" id="nm1">
+<br>
+<input type="number" name="number2" id="nm2">
+<br>
+<button id="compute">Calculate GCD</button>
+<p id="response"></p>
+
+<script>
+    'use strict'
+
+
+    document.getElementById('compute').addEventListener('click', () => {
+      let number1 = Number(getNumber1());
+
+      function getNumber1() {
+        return document.getElementById('nm1').value;
+      }
+
+      let number2 = Number(getNumber2());
+
+      function getNumber2() {
+        return document.getElementById('nm2').value;
+      }
+
+      let remain = 1;
+      while (remain !== 0) {
+        remain = number1 % number2;
+        number1 = number2;
+        number2 = remain;
+      }
+      document.getElementById('response').innerHTML = 'GCD is: ' + number1;
+    });
+</script>
+
+</body>
+</html>

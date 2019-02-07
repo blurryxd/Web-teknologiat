@@ -1,0 +1,5 @@
+.dog{
+    background: url("sprite.png") -360px -110px;
+    width:120px;
+    height: 110px;
+}

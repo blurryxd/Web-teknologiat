@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>🎈</p>
+<script>
+  // Your code here
+  const removeListener = () => {
+    balloon.innerHTML='💥';
+    window.removeEventListener('keydown', event);
+  };
+
+  let balloon = document.querySelector('p');
+  balloon.style.fontSize = '12px';
+  let currentSize = 100;
+  window.addEventListener('keydown', event => {
+    if (event.key === 'ArrowUp') {
+      currentSize = currentSize * 1.1;
+      balloon.style.fontSize = currentSize + '%';
+      event.preventDefault();
+      if (currentSize > 500) {
+        removeListener();
+      }
+    }
+  });
+
+  window.addEventListener('keydown', event => {
+    if (event.key === 'ArrowDown') {
+      currentSize = currentSize * 0.9;
+      balloon.style.fontSize = currentSize + '%';
+      event.preventDefault();
+    }
+  });
+</script>
+</body>
+</html>
