@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vantaa sää</title>
+</head>
+
+
+<style>
+    html, body {
+        margin: 0;
+        padding: 0;
+        font-family:"Trebuchet MS";
+        background-color: gray;
+    }
+
+    main {
+        background-color:lightblue;
+        font-size: 1.2em;
+        color: white;
+        width: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        padding: 20px;
+        text-align: center;
+        border-radius: 20px;
+        text-shadow: 2px 2px #333333;
+        overflow:hidden;
+        -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    }
+
+    #weather{
+        display:flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-left: 40%;
+        margin-bottom: -40px;
+    }
+
+    #splitter{
+        margin-top: 5%;
+    }
+
+</style>
+
+
+<body>
+<main class="container">
+    <h1 id="kaupunki"></h1>
+    <div id="weather">
+        <div id="splitter">
+            <div id="humidity-div"></div>
+            <div id="temp"></div>
+        </div>
+        <img src="" alt="" id="icon" width="15%" height="15%">
+    </div>
+    <p id="kuvaus"></p>
+</main>
+
+
+<script>
+    const apiKey = 'e8fb26091948075045b4764168f0eb84';
+    let icon = document.getElementById("icon");
+    let temperature = document.getElementById("temp");
+    let humidity = document.getElementById("humidity-div");
+    let kaupunki = document.getElementById("kaupunki");
+    let kuvaus = document.getElementById("kuvaus");
+    //let container = document.querySelector(".container");
+
+
+    fetch('https://api.openweathermap.org/data/2.5/weather?q=Vantaa,fi&APPID=' + apiKey)
+        .then((response) => {
+            response.json().then((data) => {
+                console.log(data);
+                icon.src = "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png";
+                temperature.innerHTML = '' + parseInt(data.main.temp - 273) + "°C";
+                humidity.innerHTML = '💧 ' + data.main.humidity + "%";
+                kaupunki.innerHTML = data.name;
+                kuvaus.innerHTML = data.weather[0].description;
+                /*
+
+                Ei toimi jostain syystä. Ideana vaihtaa containerin taustaa lämpötilan mukaan.
+
+                if (parseInt(data.main.temp - 273) > 15) {
+                    container.style.backgroundcolor = 'yellow';
+                } else if (parseInt(data.main.temp - 273) > 22) {
+                    container.style.backgroundcolor = 'gold';
+                } else if (parseInt(data.main.temp - 273) > 35) {
+                    container.style.backgroundcolor = 'orangered';
+                } else if (parseInt(data.main.temp - 273) > 5) {
+                    container.style.backgroundcolor = 'slategray';
+                } else if (parseInt(data.main.temp - 273) > 10) {
+                    container.style.backgroundcolor = 'lightyellow';
+                } else if (parseInt(data.main.temp - 273) < 4) {
+                    container.style.backgroundcolor = 'skyblue';
+                } else if (parseInt(data.main.temp - 273) < -5) {
+                    container.style.backgroundcolor = 'cyan';
+                } else {
+                    container.style.backgroundcolor = 'dodgerblue';
+                }
+
+                */
+            })
+        })
+        .catch((err)=>{
+            console.log('Fetch Error :-S', err);
+        });
+
+</script>
+</body>
+</html>
